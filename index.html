@@ -1,0 +1,33 @@
+<html>
+    <!-- <body>
+        <button class="geo-btn">get your location</button>
+        <p class="showdetails">User location details</p>
+        <script>
+            const showdetails = document.querySelector(".showdetails");
+            //console.log(navigator.geolocation.getCurrentPosition);
+            document.querySelector(".geo-btn").addEventListener("click", () => {
+                if(navigator.geolocation){
+                    navigator.geolocation.getCurrentPosition((position) => {
+                        //console.log("latitude =",position.coords.latitude ,"\nlongitude =",position.coords.longitude);
+                        const {latitude, longitude} = position.coords;
+                        showdetails.textContent = `latitude: ${latitude}, longitude: ${longitude}`;
+                    },(error) => {
+                        showdetails.textContent = error.message
+                        console.log(error.message);
+                        
+                    },() =>{}); 
+                }
+            })
+        </script>
+    </body> -->
+    <body>
+        <script>
+            navigator.geolocation.getCurrentPosition((position) => {
+                const latitude = position.coords.latitude
+                const longitude = position.coords.longitude
+                console.log(`latitude: ${latitude}, longitude: ${longitude}`)
+            },(error) =>{
+            },(option) =>{})
+        </script>
+    </body>
+</html>
